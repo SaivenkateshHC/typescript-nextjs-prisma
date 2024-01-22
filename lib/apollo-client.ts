@@ -1,8 +1,10 @@
-import { ApolloClient, InMemoryCache } from "@apollo/client";
+import { ApolloClient, InMemoryCache, HttpLink } from '@apollo/client';
 
 const client = new ApolloClient({
-  uri: 'https://typescript-nextjs-prisma.vercel.app/api/graphql',
+  link: new HttpLink({
+    uri: '/api/graphql', // Server URL (must be absolute)
+  }),
   cache: new InMemoryCache(),
-})
+});
 
-export default client
+export default client;
