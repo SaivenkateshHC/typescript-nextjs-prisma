@@ -221,7 +221,8 @@ export default createYoga<{
   res: NextApiResponse
 }>({
   schema,
-  graphqlEndpoint: '/api/graphql'
+  // graphqlEndpoint: '/api/graphql'
+  graphqlEndpoint: '/server/pages/api/graphql'
 })
 
 export const config = {
